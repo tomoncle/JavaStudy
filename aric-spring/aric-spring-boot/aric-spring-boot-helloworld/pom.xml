@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>aric-spring-boot</artifactId>
+        <groupId>com.aric</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>aric-spring-boot-helloworld</artifactId>
+    <packaging>war</packaging>
+
+    <dependencies>
+        <!--spring-boot-starter-web jar
+      提供启动嵌入式Tomcat容器的自动化配置,
+      并且提供对微服务应用有价值的端点信息，
+      如服务器信息、应用指标（metrics）以及环境详情
+      -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--打成war包 tomcat启动依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.aric</groupId>
+            <artifactId>aric-spring-commons</artifactId>
+             <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+
+</project>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>design23.createType.KFCFactory</OriginalElement>
+  <nodes>
+    <node x="423.91666666666663" y="188.0">design23.createType.Hamburg</node>
+    <node x="552.0" y="311.0">design23.createType.ChickenBurger</node>
+    <node x="0.0" y="434.0">design23.createType.Customer</node>
+    <node x="765.0" y="311.0">design23.createType.Coffee</node>
+    <node x="788.0" y="188.0">design23.createType.Drinks</node>
+    <node x="513.2708333333333" y="447.5">design23.createType.KFCFactoryForChickenBurgerAndCoffee</node>
+    <node x="368.0" y="311.0">design23.createType.FishBurger</node>
+    <node x="435.66666666666663" y="0.0">design23.createType.BaseFood</node>
+    <node x="920.0" y="311.0">design23.createType.Juice</node>
+    <node x="788.0" y="39.0">design23.createType.FoodService</node>
+    <node x="295.0" y="597.0">design23.createType.FactoryMethod</node>
+    <node x="58.0" y="298.0">design23.createType.KFCFactory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="design23.createType.Coffee" target="design23.createType.Drinks">
+      <point x="0.0" y="-30.0" />
+      <point x="832.5" y="273.0" />
+      <point x="847.5" y="273.0" />
+      <point x="-59.5" y="30.0" />
+    </edge>
+    <edge source="design23.createType.ChickenBurger" target="design23.createType.Hamburg">
+      <point x="0.0" y="-30.0" />
+      <point x="648.5" y="273.0" />
+      <point x="602.4166666666666" y="273.0" />
+      <point x="59.5" y="30.0" />
+    </edge>
+    <edge source="design23.createType.Hamburg" target="design23.createType.FoodService">
+      <point x="59.5" y="-30.0" />
+      <point x="602.4166666666666" y="168.0" />
+      <point x="847.5" y="168.0" />
+      <point x="-59.5" y="30.0" />
+    </edge>
+    <edge source="design23.createType.FactoryMethod" target="design23.createType.KFCFactoryForChickenBurgerAndCoffee">
+      <point x="47.25" y="-30.0" />
+      <point x="436.75" y="572.0" />
+      <point x="675.2708333333333" y="572.0" />
+      <point x="0.0" y="43.0" />
+    </edge>
+    <edge source="design23.createType.Customer" target="design23.createType.KFCFactory">
+      <point x="0.0" y="-56.5" />
+      <point x="-72.5" y="43.0" />
+    </edge>
+    <edge source="design23.createType.Drinks" target="design23.createType.FoodService">
+      <point x="59.5" y="-30.0" />
+      <point x="59.5" y="30.0" />
+    </edge>
+    <edge source="design23.createType.Drinks" target="design23.createType.BaseFood">
+      <point x="-59.5" y="-30.0" />
+      <point x="847.5" y="158.0" />
+      <point x="578.9166666666666" y="158.0" />
+      <point x="47.75" y="69.0" />
+    </edge>
+    <edge source="design23.createType.KFCFactoryForChickenBurgerAndCoffee" target="design23.createType.ChickenBurger">
+      <point x="0.0" y="-43.0" />
+      <point x="675.2708333333333" y="409.0" />
+      <point x="648.5" y="409.0" />
+      <point x="0.0" y="30.0" />
+    </edge>
+    <edge source="design23.createType.Hamburg" target="design23.createType.BaseFood">
+      <point x="-59.5" y="-30.0" />
+      <point x="-47.75" y="69.0" />
+    </edge>
+    <edge source="design23.createType.KFCFactoryForChickenBurgerAndCoffee" target="design23.createType.Coffee">
+      <point x="108.0" y="-43.0" />
+      <point x="783.2708333333333" y="409.0" />
+      <point x="832.5" y="409.0" />
+      <point x="0.0" y="30.0" />
+    </edge>
+    <edge source="design23.createType.Juice" target="design23.createType.Drinks">
+      <point x="0.0" y="-30.0" />
+      <point x="981.5" y="273.0" />
+      <point x="966.5" y="273.0" />
+      <point x="59.5" y="30.0" />
+    </edge>
+    <edge source="design23.createType.FactoryMethod" target="design23.createType.Customer">
+      <point x="-47.25" y="-30.0" />
+      <point x="342.25" y="572.0" />
+      <point x="130.5" y="572.0" />
+      <point x="0.0" y="56.5" />
+    </edge>
+    <edge source="design23.createType.FishBurger" target="design23.createType.Hamburg">
+      <point x="0.0" y="-30.0" />
+      <point x="450.0" y="273.0" />
+      <point x="483.41666666666663" y="273.0" />
+      <point x="-59.5" y="30.0" />
+    </edge>
+    <edge source="design23.createType.KFCFactoryForChickenBurgerAndCoffee" target="design23.createType.KFCFactory">
+      <point x="-108.0" y="-43.0" />
+      <point x="567.2708333333333" y="409.0" />
+      <point x="275.5" y="409.0" />
+      <point x="72.5" y="43.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="521.5" y="328.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>packageLocal</VISIBILITY>
+</Diagram>
+

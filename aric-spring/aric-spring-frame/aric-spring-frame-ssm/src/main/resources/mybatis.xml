@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 记得创建表单时候，每个表的字段名称不能相同 ，否则查询出来的数据不准确-->
+    <!--<typeAliases>-->
+    <!--<typeAlias type="com.aric.ssm.entity.User" alias="user"/>-->
+    <!--</typeAliases>-->
+    <!--配置全局属性-->
+    <settings>
+        <!--使用jdbc的getGeneratedKeys获取数据库自增主键值-->
+        <setting name="useGeneratedKeys" value="true"/>
+
+        <!--使用列名到属性名的转换 ，默认为true
+        例如： select username  as  name from user ,将数据库的username转换为类的属性name-->
+        <setting name="useColumnLabel" value="true"/>
+
+        <!--开启驼峰命名转换 将user_id 自动识别为userId-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+
+    </settings>
+</configuration>

@@ -1,0 +1,74 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx
+         http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+    <import resource="classpath:spring-*.xml"/>
+
+    <bean id="dataSource"
+          class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName"
+                  value="com.mysql.jdbc.Driver">
+        </property>
+        <property name="url"
+                  value="jdbc:mysql://localhost:3306/tom.lee?characterEncoding=utf8">
+        </property>
+        <property name="username" value="root"></property>
+        <property name="password" value="root"></property>
+
+    </bean>
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation">
+            <value>classpath:hibernate.cfg.xml</value>
+        </property>
+        <!--扫描加载实体映射文件-->
+        <property name="mappingDirectoryLocations">
+            <list>
+                <value>classpath:/mapper</value>
+            </list>
+        </property>
+
+
+    </bean>
+
+    <!-- 事务切面 -->
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+
+
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+    <tx:attributes>
+        <tx:method name="find*" propagation="REQUIRED" />
+        <tx:method name="get*" propagation="REQUIRED" />
+        <tx:method name="add*" propagation="REQUIRED" />
+        <tx:method name="save*" propagation="REQUIRED" />
+        <tx:method name="upd*" propagation="REQUIRED" />
+        <tx:method name="del*" propagation="REQUIRED" />
+        <tx:method name="edit*" propagation="REQUIRED" />
+        <tx:method name="remove*" propagation="REQUIRED" />
+        <tx:method name="update*" propagation="REQUIRED" />
+        <tx:method name="query*" propagation="REQUIRED" />
+    <tx:method name="*" propagation="REQUIRED"/>
+    </tx:attributes>
+    </tx:advice>
+
+    <!-- 声明Aop配置 -->
+    <aop:config>
+        <aop:pointcut expression="execution(* com.aric.xmls.ssh.service.*.*.*(..))"
+                      id="pointCut" />
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="pointCut" />
+    </aop:config>
+
+
+</beans>

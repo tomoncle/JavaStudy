@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+        <!-- constant标签 用于Struts2 默认行为标签-->
+        <!-- package标签 包标签，用于区分不同的请求文件的标签，比方说
+            网站前台请求  网站后台请求-->
+        <!-- include标签 用于引入其他的xml配置文件-->
+        <!-- 把struts2交给spring管理  -->
+        <constant name="struts.objectFactory" value="spring" />
+        <!-- 配置web默认编码集，相当于 HttpServletRequest.setChartacterEncoding用法 -->
+        <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+        <!-- 默认我们Struts2的请求后缀是.action,也就是说我们不配置该元素，action/do都可以 -->
+        <!--<constant name="struts.action.extension" value="action,do"></constant>-->
+        <!-- 设置浏览器是否缓存静态内容，默认值为true，在我们开发阶段建议关闭，防止修改后测试不到 -->
+        <constant name="struts.serve.static.browserCache" value="false"></constant>
+        <!-- 当struts 配置文件修改后，系统是否自动重新加载该文件，默认为false -->
+        <constant name="struts.configuration.xml.reload" value="true"></constant>
+        <!-- 开发模式下使用，这样可以打印出更加详细的错误信息 -->
+        <constant name="struts.devMode" value="true"></constant>
+        <!-- 默认视图主题 -->
+        <constant name="struts.ui.theme" value="simple"></constant>
+        <!-- name属性：包名，用于被别的包调用或继承
+            extends: 继承哪个包，会继承该包下配置信息和拦截器等等
+            namespace:选填，url连接必须加入/new/action.xxx
+         -->
+
+        <package name="ssh"  extends="struts-default">
+
+                <!-- add struts action defining list here -->
+                <!-- 登录Action -->
+                <action name="loginAction!*" class="loginAction" method="{1}">
+                        <result name="login-success">/welcome.jsp</result>
+                        <result name="login-error">/login.jsp</result>
+                        <result name="error">/404.jsp</result>
+                </action>
+
+        </package>
+</struts>

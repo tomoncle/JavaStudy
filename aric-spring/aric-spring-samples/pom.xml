@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>aric-spring</artifactId>
+        <groupId>com.aric</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>aric-spring-samples</artifactId>
+    <packaging>pom</packaging>
+
+    <!--项目模块-->
+    <modules>
+        <module>aric-spring-sample-helloWorld</module>
+        <module>aric-spring-sample-annotations</module>
+        <module>aric-spring-sample-aop</module>
+        <module>aric-spring-sample-redis</module>
+        <module>aric-spring-sample-mongodb</module>
+    </modules>
+    <properties>
+        <spring.version>4.2.5.RELEASE</spring.version>
+    </properties>
+
+
+    <dependencies>
+        <!--spring 企业级集成jar-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <!--spring junit-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.aric</groupId>
+            <artifactId>aric-spring-commons</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+</project>

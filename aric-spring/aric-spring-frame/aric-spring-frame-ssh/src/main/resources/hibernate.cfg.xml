@@ -1,0 +1,29 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!--<property name="connection.url">-->
+			<!--jdbc:mysql://localhost:3306/tom.lee?characterEncoding=utf8-->
+		<!--</property>-->
+		<!--<property name="connection.username">root</property>-->
+		<!--<property name="connection.password">root</property>-->
+		<!--<property name="connection.driver_class">-->
+			<!--com.mysql.jdbc.Driver-->
+		<!--</property>-->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!-- 是否在控制台打印sql语句 -->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="auto-import">false</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="connection.autocommit">true</property>
+
+		<!--add mapping list here -->
+		<!--<mapping resource="com/hyper/recruitment/entity/TResume.hbm.xml" />-->
+
+
+
+	</session-factory>
+</hibernate-configuration>

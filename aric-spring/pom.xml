@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>king-aric-parent</artifactId>
+        <groupId>com.aricframework</groupId>
+        <version>2.0.RELEASE</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.aric</groupId>
+    <artifactId>aric-spring</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <!--项目模块-->
+    <modules>
+
+        <module>aric-spring-commons</module>
+        <module>aric-spring-boot</module>
+        <module>aric-spring-frame</module>
+        <module>aric-spring-zookeeper</module>
+        <module>aric-spring-core</module>
+        <module>aric-spring-samples</module>
+        <module>aric-spring-j2ee</module>
+        <module>aric-spring-mq</module>
+        <module>aric-spring-data</module>
+    </modules>
+
+</project>

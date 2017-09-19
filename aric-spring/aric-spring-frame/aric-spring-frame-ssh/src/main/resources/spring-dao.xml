@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--注入dao bean-->
+    <bean id="userDao" class="com.aric.xmls.ssh.dao.impl.UserDaoImpl">
+       <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--<bean id="userService" class="com.aric.xmls.ssh.service.impl.UserServiceImpl">-->
+        <!--<property name="userDao" ref="userDao"/>-->
+    <!--</bean>-->
+
+    <bean id="accountDao" class="com.aric.xmls.ssh.dao.impl.AccountDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--<bean id="accountService" class="com.aric.xmls.ssh.service.impl.AccountServiceImpl">-->
+        <!--<property name="accountDao" ref="accountDao"/>-->
+    <!--</bean>-->
+
+
+
+</beans>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>design23.createType.AbstractFactory</OriginalElement>
+  <nodes>
+    <node x="233.5" y="330.0">design23.createType.AbstractFactory</node>
+    <node x="169.0" y="110.0">design23.createType.LanguageFactory</node>
+    <node x="0.0" y="220.0">design23.createType.StudentLanguageFactoryImpl</node>
+    <node x="515.5" y="110.0">design23.createType.Chinese</node>
+    <node x="244.5" y="0.0">design23.createType.AbstractLanguage</node>
+    <node x="20.0" y="110.0">design23.createType.English</node>
+    <node x="338.0" y="220.0">design23.createType.TeacherLanguageFactoryImpl</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="design23.createType.AbstractFactory" target="design23.createType.TeacherLanguageFactoryImpl">
+      <point x="47.25" y="-30.0" />
+      <point x="375.25" y="305.0" />
+      <point x="497.0" y="305.0" />
+      <point x="0.0" y="30.0" />
+    </edge>
+    <edge source="design23.createType.TeacherLanguageFactoryImpl" target="design23.createType.Chinese">
+      <point x="79.5" y="-30.0" />
+      <point x="576.5" y="195.0" />
+      <point x="578.0" y="195.0" />
+      <point x="0.0" y="30.0" />
+    </edge>
+    <edge source="design23.createType.TeacherLanguageFactoryImpl" target="design23.createType.LanguageFactory">
+      <point x="-79.5" y="-30.0" />
+      <point x="417.5" y="195.0" />
+      <point x="407.5" y="195.0" />
+      <point x="79.5" y="30.0" />
+    </edge>
+    <edge source="design23.createType.English" target="design23.createType.AbstractLanguage">
+      <point x="0.0" y="-30.0" />
+      <point x="79.5" y="85.0" />
+      <point x="286.25" y="85.0" />
+      <point x="-41.75" y="30.0" />
+    </edge>
+    <edge source="design23.createType.StudentLanguageFactoryImpl" target="design23.createType.English">
+      <point x="-79.5" y="-30.0" />
+      <point x="0.0" y="30.0" />
+    </edge>
+    <edge source="design23.createType.AbstractFactory" target="design23.createType.StudentLanguageFactoryImpl">
+      <point x="-47.25" y="-30.0" />
+      <point x="280.75" y="305.0" />
+      <point x="159.0" y="305.0" />
+      <point x="0.0" y="30.0" />
+    </edge>
+    <edge source="design23.createType.Chinese" target="design23.createType.AbstractLanguage">
+      <point x="0.0" y="-30.0" />
+      <point x="578.0" y="85.0" />
+      <point x="369.75" y="85.0" />
+      <point x="41.75" y="30.0" />
+    </edge>
+    <edge source="design23.createType.StudentLanguageFactoryImpl" target="design23.createType.LanguageFactory">
+      <point x="79.5" y="-30.0" />
+      <point x="238.5" y="195.0" />
+      <point x="248.5" y="195.0" />
+      <point x="-79.5" y="30.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="259.0" y="143.0" />
+  <SelectedNodes>
+    <node>design23.createType.AbstractFactory</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>packageLocal</VISIBILITY>
+</Diagram>
+
